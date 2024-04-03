@@ -23,7 +23,7 @@ public class EmpresaController {
         Map<String, Object> response = new HashMap<>();
         try {
             List<Empresa> empresas = empresaService.findAll();
-            response.put("Empresas: ", empresas);
+            response.put("empresas", empresas);
             return ResponseEntity.ok(response);
         }catch (Exception e){
             response.put("Error ", e.getMessage());
@@ -36,7 +36,7 @@ public class EmpresaController {
         Map<String, Object> response = new HashMap<>();
         try {
             Empresa empresa = empresaService.findById(id);
-            response.put("Empresa: ", empresa);
+            response.put("empresa", empresa);
             return ResponseEntity.ok(response);
         }catch (Exception e){
             response.put("Error ", e.getMessage());
