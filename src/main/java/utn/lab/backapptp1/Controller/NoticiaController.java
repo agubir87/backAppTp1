@@ -27,7 +27,7 @@ public class NoticiaController {
         Map<String, Object> response = new HashMap<>();
         try {
             List<Noticia> noticias = noticiaService.findAll();
-            response.put("Noticias: ", noticias);
+            response.put("noticias", noticias);
             return ResponseEntity.ok(response);
         }catch (Exception e){
             response.put("Error ", e.getMessage());
@@ -40,7 +40,7 @@ public class NoticiaController {
         Map<String, Object> response = new HashMap<>();
         try {
             List<Noticia> noticias = noticiaService.findAllPublicadas();
-            response.put("Noticias publicadas: ", noticias);
+            response.put("noticias", noticias);
             return ResponseEntity.ok(response);
         }catch (Exception e){
             response.put("Error ", e.getMessage());
@@ -53,7 +53,7 @@ public class NoticiaController {
         Map<String, Object> response = new HashMap<>();
         try {
             List<Noticia> noticias = noticiaService.findAllNotPublicadas();
-            response.put("Noticias no publicadas: ", noticias);
+            response.put("noticias", noticias);
             return ResponseEntity.ok(response);
         }catch (Exception e){
             response.put("Error ", e.getMessage());
@@ -66,7 +66,7 @@ public class NoticiaController {
         Map<String, Object> response = new HashMap<>();
         try {
             Noticia noticia = noticiaService.findById(id);
-            response.put("Noticia: ", noticia);
+            response.put("noticia", noticia);
             return ResponseEntity.ok(response);
         }catch (Exception e){
             response.put("Error ", e.getMessage());
