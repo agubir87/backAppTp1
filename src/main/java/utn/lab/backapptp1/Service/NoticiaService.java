@@ -15,4 +15,5 @@ public interface NoticiaService {
     public List<Noticia> findAllPublicadas();
     public List<Noticia> findAllNotPublicadas();
     public String publicadaNoPublicada(Integer id);
+    public void subirImagen(String imagen, Integer id);
 }

@@ -20,7 +20,7 @@ CREATE TABLE `noticia` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `titulo_noticia` VARCHAR(128),
     `resumen_noticia` VARCHAR(1024),
-    `imagen_noticia` VARCHAR(128),
+    `imagen_noticia` VARCHAR(256),
     `contenido_html` VARCHAR(20480),
 	`publicada` CHAR(1),
     `fecha_publicacion` DATE,

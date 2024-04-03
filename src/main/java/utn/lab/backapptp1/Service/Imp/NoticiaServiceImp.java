@@ -82,4 +82,11 @@ public class NoticiaServiceImp implements NoticiaService {
             return "La noticia ya esta publicada";
         }
     }
+
+    @Override
+    public void subirImagen(String imagen, Integer id) {
+        Noticia noticia = noticiaRepository.findById(id).orElseThrow(()-> new NullPointerException("No se encontro una noticia con el id " + id));
+        noticia.setImagenNoticia(imagen);
+        noticiaRepository.save(noticia);
+    }
 }
