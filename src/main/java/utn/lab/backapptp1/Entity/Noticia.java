@@ -23,14 +23,14 @@ public class Noticia {
 
     private String imagenNoticia;
 
-    private String contenidoHTML;
+    private String contenidoHtml;
 
     private char publicada;
 
     private LocalDate fechaPublicacion;
 
     @ManyToOne
-    @JoinColumn(name = "idEmpresa")
+    @JoinColumn(name = "id_empresa")
     private Empresa empresa;
 
 }

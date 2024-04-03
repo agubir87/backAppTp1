@@ -27,7 +27,7 @@ public class NoticiaServiceImp implements NoticiaService {
         noticia.setResumenNoticia(noticiaDto.resumenNoticia());
         noticia.setImagenNoticia(noticiaDto.imagenNoticia());
         noticia.setTituloNoticia(noticiaDto.tituloNoticia());
-        noticia.setContenidoHTML(noticiaDto.contenidoHTML());
+        noticia.setContenidoHtml(noticiaDto.contenidoHTML());
         noticia.setEmpresa(empresaService.findById(noticiaDto.idEmpresa()));
         noticia.setFechaPublicacion(LocalDate.now());
         noticia.setPublicada('Y');
@@ -40,7 +40,7 @@ public class NoticiaServiceImp implements NoticiaService {
         noticia.setImagenNoticia(noticiaNueva.imagenNoticia());
         noticia.setResumenNoticia(noticiaNueva.resumenNoticia());
         noticia.setTituloNoticia(noticiaNueva.tituloNoticia());
-        noticia.setContenidoHTML(noticiaNueva.contenidoHTML());
+        noticia.setContenidoHtml(noticiaNueva.contenidoHTML());
         return noticiaRepository.save(noticia);
     }
 

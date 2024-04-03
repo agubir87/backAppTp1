@@ -24,7 +24,7 @@ CREATE TABLE `noticia` (
     `contenido_html` VARCHAR(20480),
 	`publicada` CHAR(1),
     `fecha_publicacion` DATE,
-    `idEmpresa` INT,
+    `id_empresa` INT,
      PRIMARY KEY (`id`),
-    FOREIGN KEY (`idEmpresa`) REFERENCES `empresa`(`id`)
+    FOREIGN KEY (`id_empresa`) REFERENCES `empresa`(`id`)
 );

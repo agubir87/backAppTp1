@@ -50,24 +50,7 @@ public class ImageServiceImp implements ImageService {
             noticiaService.subirImagen(enlaceImagen, idNoticia);
 
             return enlaceImagen;
-       /* // Configurar Firebase Storage
-        Storage storage = StorageOptions.newBuilder()
-                .setCredentials(GoogleCredentials.getApplicationDefault())
-                .build()
-                .getService();
 
-        // Generar un nombre único para la imagen
-        String fileName = file.getOriginalFilename() +"noticia="+idNoticia;
-
-        // Subir la imagen a Firebase Storage
-        InputStream fileInputStream = file.getInputStream();
-        BlobInfo blobInfo = storage.create(BlobInfo.newBuilder("gs://tplab4-f8c38.appspot.com", fileName).build(), fileInputStream);
-
-        // Obtener la URL pública de la imagen
-        String imageUrl = blobInfo.getMediaLink();
-
-        noticiaService.subirImagen(imageUrl,idNoticia);
-        return imageUrl;*/
         }catch (Exception e){
             throw new RuntimeException("Error al subir la imagen a Firebase Storage "+ e.getMessage());
         }
