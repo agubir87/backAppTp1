@@ -3,8 +3,6 @@ import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.storage.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-import utn.lab.backapptp1.Entity.Noticia;
 import utn.lab.backapptp1.Service.ImageService;
 import utn.lab.backapptp1.Service.NoticiaService;
 

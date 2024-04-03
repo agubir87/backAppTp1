@@ -37,7 +37,6 @@ public class NoticiaServiceImp implements NoticiaService {
     @Override
     public Noticia edit(NoticiaEdit noticiaNueva, Integer id) {
         Noticia noticia = noticiaRepository.findById(id).orElseThrow(() -> new NullPointerException("No se encontro una noticias con el id "+id));
-        noticia.setImagenNoticia(noticiaNueva.imagenNoticia());
         noticia.setResumenNoticia(noticiaNueva.resumenNoticia());
         noticia.setTituloNoticia(noticiaNueva.tituloNoticia());
         noticia.setContenidoHtml(noticiaNueva.contenidoHTML());
