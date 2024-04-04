@@ -79,7 +79,7 @@ public class NoticiaController {
         Map<String, Object> response = new HashMap<>();
         try {
             Noticia noticiaResponse = noticiaService.save(noticia);
-            response.put("Noticia creada con exito: ", noticiaResponse);
+            response.put("noticia", noticiaResponse);
             return ResponseEntity.ok(response);
         }catch (Exception e){
             response.put("Error ", e.getMessage());
