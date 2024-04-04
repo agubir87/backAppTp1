@@ -3,7 +3,9 @@ package utn.lab.backapptp1.Service.Imp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import utn.lab.backapptp1.Entity.Empresa;
+import utn.lab.backapptp1.Entity.Noticia;
 import utn.lab.backapptp1.Repository.EmpresaRepository;
+import utn.lab.backapptp1.Repository.NoticiaRepository;
 import utn.lab.backapptp1.Service.EmpresaService;
 
 import java.util.List;
@@ -13,6 +15,9 @@ public class EmpresaServiceImp implements EmpresaService {
 
     @Autowired
     private EmpresaRepository empresaRepository;
+
+    @Autowired
+    private NoticiaRepository noticiaRepository;
 
     @Override
     public Empresa save(Empresa empresa) {
@@ -34,6 +39,9 @@ public class EmpresaServiceImp implements EmpresaService {
 
     @Override
     public void delete(Integer id) {
+        for (Noticia noticia : noticiaRepository.findByEmpresaId(id)){
+            noticiaRepository.delete(noticia);
+        }
         empresaRepository.deleteById(id);
     }
 

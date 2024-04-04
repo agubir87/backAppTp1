@@ -15,4 +15,6 @@ public interface NoticiaRepository extends JpaRepository<Noticia, Integer> {
 
     @Query("SELECT n FROM Noticia n WHERE n.publicada = 'N'")
     List<Noticia> findNotPublicadas();
+
+    List<Noticia> findByEmpresaId(Integer empresaId);
 }

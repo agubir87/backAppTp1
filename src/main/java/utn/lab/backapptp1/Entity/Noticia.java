@@ -29,7 +29,7 @@ public class Noticia {
 
     private LocalDate fechaPublicacion;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "id_empresa")
     private Empresa empresa;
 
